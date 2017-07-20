@@ -1,0 +1,23 @@
+{
+  "name": "weex-animation",
+  "version": "0.0.1",
+  "description": "animation.css to weex-animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacke2/weex-animation.git"
+  },
+  "keywords": [
+    "weex-animation",
+    "weex"
+  ],
+  "author": "hacke2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacke2/weex-animation/issues"
+  },
+  "homepage": "https://github.com/hacke2/weex-animation#readme"
+}
