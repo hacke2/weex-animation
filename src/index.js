@@ -17,13 +17,13 @@ export function transition(el, opts) {
 
 function transitionNow(el, styles) {
   const duration = 0.0001;
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     animation.transition(el, {
       // weex bug, can't use 0
       duration,
       styles
     });
-    setTimeout(function() {
+    setTimeout(function () {
       resolve();
     }, duration)
   })
@@ -32,7 +32,7 @@ function transitionNow(el, styles) {
 // 隐藏list
 export async function fadeOut(el, obj) {
   await transitionNow(el, {
-      opacity: 1
+    opacity: 1
   });
 
   return transition(el, {
@@ -46,7 +46,7 @@ export async function fadeOut(el, obj) {
 // 显示list
 export async function fadeIn(el, obj) {
   await transitionNow(el, {
-      opacity: 0
+    opacity: 0
   });
 
   return transition(el, {
@@ -76,8 +76,8 @@ export async function zoomOut(el, obj) {
 // 放大
 export async function zoomIn(el, obj) {
   await transitionNow(el, {
-      opacity: 0,
-      transform: 'scale(0)'
+    opacity: 0,
+    transform: 'scale(0)'
   });
 
   return transition(el, {
