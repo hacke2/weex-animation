@@ -60,9 +60,7 @@
 	          items: this.animations
 	        }, event => {
 	          if (event.result === 'success') {
-	            modal.toast({
-	            	message: this.animations[event.data]
-	            })
+	            this.setAnimation(event.data)
 	          }
 	        })
 
