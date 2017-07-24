@@ -2,7 +2,7 @@
     <div class="wrap">
         <text class="select-title">select animations:</text>
         <select @change="value => $emit('change', value)">
-            <option v-for="animation in animations" :value="animation">{{animation}}</option>
+            <option v-for="animation in animations" :value="animation" :key="animation">{{animation}}</option>
         </select>
     </div>
 </template>

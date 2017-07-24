@@ -69,10 +69,6 @@
 
       },
       async setAnimation(animationName) {
-        modal.toast({
-          message: animationName,
-          duration: 0.3
-        })
         await animation[animationName](this.$refs.text);
         await animation.transition(this.$refs.text, {
           styles: {
@@ -81,6 +77,11 @@
           },
           duration: 0.0001,
           delay: 300
+        });
+        console.log(animationName)
+        modal.toast({
+          message: animationName,
+          duration: 0.3
         })
       }
     }
