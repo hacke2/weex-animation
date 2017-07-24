@@ -1,10 +1,14 @@
 # weex-animation
 
+demo: http://www.hacke2.cn/weex-animation/
+
 like animation.css for weex.
 
 Use weex playground scan:
 
-![WX20170628-154657_2x]()
+![playground](https://user-images.githubusercontent.com/6399899/28513090-4e80085c-7087-11e7-97bd-2fceaa6acf1d.png)
+
+![native](https://user-images.githubusercontent.com/6399899/28513092-4eb30bb2-7087-11e7-9bb9-39ec2ba821da.png)
 
 
 ## getting start

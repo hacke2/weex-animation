@@ -60,12 +60,16 @@
 	          items: this.animations
 	        }, event => {
 	          if (event.result === 'success') {
-	            this.setAnimation(event.data)
+	          	const index = event.data;
+	            this.setAnimation(this.animations[index]);
 	          }
 	        })
 
     	},
     	async setAnimation(animationName) {
+    		modal.toast({
+          		message: animationName
+          	})
 			await animation[animationName](this.$refs.text);
 			await animation.transition(this.$refs.text, {
 				styles: {

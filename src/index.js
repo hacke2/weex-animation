@@ -16,7 +16,7 @@ export function transition(el, opts) {
 }
 
 function transitionNow(el, styles) {
-  const duration = 1;
+  const duration = 0.0001;
   return new Promise(function(resolve, reject) {
     animation.transition(el, {
       // weex bug, can't use 0
