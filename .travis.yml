@@ -1,0 +1,13 @@
+language: node_js
+node_js: node
+branches:
+  only: master
+script: npm run build
+after_script:
+  - cd dist
+  - git init
+  - git config user.name "sm-bot"
+  - git config user.email "bot@sm.cn"
+  - git add .
+  - git commit -m 'Boring work...'
+  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/hacke2/weex-animation" master:gh-pages
