@@ -73,6 +73,27 @@ export async function zoomOut(el, obj) {
   })
 }
 
+export async function zoomOutDown(el, obj) {
+
+  await transition(el, {
+    styles: {
+      opacity: 1,
+      transform: 'scale(0.475) translateY(-60px)'
+    },
+    timingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)'
+  })
+
+  await transition(el, {
+    styles: {
+      opacity: 0,
+      transform: 'scale(.1) translateY(2000px)',
+      transformOrigin: 'center bottom'
+    },
+    timingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+  })
+
+}
+
 // 放大
 export async function zoomIn(el, obj) {
   await transitionNow(el, {
@@ -87,6 +108,98 @@ export async function zoomIn(el, obj) {
     },
     ...obj
   })
+}
+
+export async function zoomInDown(el, obj) {
+  await transitionNow(el, {
+    opacity: 0,
+    transform: 'scale(0.1) translateY(-1000px)'
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1,
+      transform: 'scale(0.475) translateY(60px)'
+    },
+    timingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)'
+  })
+
+  await transition(el, {
+    styles: {
+      transform: 'scale(1) translateY(0px)'
+    },
+    timingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+  })
+
+}
+
+export async function zoomInLeft(el, obj) {
+  await transitionNow(el, {
+    opacity: 0,
+    transform: 'scale(0.1) translateX(-1000px)'
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1,
+      transform: 'scale(0.475) translateX(10px)',
+    },
+    timingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)'
+  })
+
+  await transition(el, {
+    styles: {
+      transform: 'scale(1) translateX(0px)',
+    },
+    timingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+  })
+
+}
+
+export async function zoomInRight(el, obj) {
+  await transitionNow(el, {
+    opacity: 0,
+    transform: 'scale(0.1) translateX(1000px)'
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1,
+      transform: 'scale(0.475) translateX(-10px)'
+    },
+    timingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)'
+  })
+
+  await transition(el, {
+    styles: {
+      transform: 'scale(1) translateX(0px)',
+    },
+    timingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+  })
+
+}
+
+export async function zoomInUp(el, obj) {
+  await transitionNow(el, {
+    opacity: 0,
+    transform: 'scale(0.1) translateY(1000px)'
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1,
+      transform: 'scale(0.475) translateX(-10px)'
+    },
+    timingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)'
+  })
+
+  await transition(el, {
+    styles: {
+      transform: 'scale(1) translateX(0px)',
+    },
+    timingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+  })
+
 }
 
 export async function flash(el, obj) {

@@ -1,6 +1,6 @@
 {
   "name": "weex-animation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "weex-animation",
   "author": "hacke2",
   "main": "./src/index.js",

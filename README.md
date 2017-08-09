@@ -69,13 +69,13 @@ you should add exclude 'weex-animation' to vue/js loader, because it should buil
 - [ ] bounceOutRight
 - [ ] bounceOutUp
 - [x] fadeIn
-- [ ] fadeInDown
-- [ ] fadeInDownBig
-- [ ] fadeInLeft
-- [ ] fadeInLeftBig
-- [ ] fadeInRight
-- [ ] fadeInRightBig
-- [ ] fadeInUp
+- [x] fadeInDown
+- [x] fadeInDownBig
+- [x] fadeInLeft
+- [x] fadeInLeftBig
+- [x] fadeInRight
+- [x] fadeInRightBig
+- [x] fadeInUp
 - [ ] fadeInUpBig
 - [x] fadeOut
 - [ ] fadeOutDown
