@@ -49,10 +49,10 @@ you should add exclude 'weex-animation' to vue/js loader, because it should buil
 ## animation function 
 
 - [ ] bounce
-- [ ] flash
-- [ ] pulse
+- [x] flash
+- [x] pulse
 - [ ] rubberBand
-- [ ] shake
+- [x] shake
 - [ ] headShake
 - [ ] swing
 - [ ] tada

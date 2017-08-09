@@ -88,3 +88,69 @@ export async function zoomIn(el, obj) {
     ...obj
   })
 }
+
+export async function flash(el, obj) {
+  await transition(el, {
+    styles: {
+      opacity: 0
+    },
+    duration: 100
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1
+    },
+    duration: 100
+  });
+  
+  await transition(el, {
+    styles: {
+      opacity: 0
+    },
+    duration: 100
+  });
+
+  await transition(el, {
+    styles: {
+      opacity: 1
+    },
+    duration: 100
+  });
+}
+
+export async function pulse(el, obj) {
+  await transitionNow(el, {
+    transform: 'scale(1)'
+  });
+
+  await transition(el, {
+    styles: {
+      transform: 'scale(1.05)'
+    }
+  });
+  
+  return transition(el, {
+    styles: {
+      transform: 'scale(1)'
+    }
+  });
+}
+
+export async function shake(el, obj) {
+  await transitionNow(el, {
+    transform: 'translateX(0)'
+  });
+
+  for (let i = 0; i < 10; i++) {
+    await transition(el, {
+      styles: {
+        transform: `translateX(${ i % 2 ? 10 : -10}px)`
+      },
+      duration: 100
+    })
+  }
+  
+}
+
+
